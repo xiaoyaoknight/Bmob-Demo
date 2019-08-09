@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66C4F1F931D8B3D5F818E835 /* Pods_Bmob_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31843FE518AB45DF18385AC4 /* Pods_Bmob_Demo.framework */; };
 		C717301222FD60A4003BC45C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C717301122FD60A4003BC45C /* AppDelegate.m */; };
 		C717301522FD60A4003BC45C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C717301422FD60A4003BC45C /* ViewController.m */; };
 		C717301822FD60A4003BC45C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C717301622FD60A4003BC45C /* Main.storyboard */; };
@@ -35,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28B93BBD85F2D6D0FA80D019 /* Pods-Bmob-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bmob-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bmob-Demo/Pods-Bmob-Demo.release.xcconfig"; sourceTree = "<group>"; };
+		31843FE518AB45DF18385AC4 /* Pods_Bmob_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bmob_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		76BBC704D8298A359DDFFCEE /* Pods-Bmob-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bmob-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bmob-Demo/Pods-Bmob-Demo.debug.xcconfig"; sourceTree = "<group>"; };
 		C717300D22FD60A4003BC45C /* Bmob-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bmob-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C717301022FD60A4003BC45C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		C717301122FD60A4003BC45C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				66C4F1F931D8B3D5F818E835 /* Pods_Bmob_Demo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +83,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		60E670F2268787C89FF616B9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				31843FE518AB45DF18385AC4 /* Pods_Bmob_Demo.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8743A81DCF6F3A5A68B6E03C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				76BBC704D8298A359DDFFCEE /* Pods-Bmob-Demo.debug.xcconfig */,
+				28B93BBD85F2D6D0FA80D019 /* Pods-Bmob-Demo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C717300422FD60A4003BC45C = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +107,8 @@
 				C717302822FD60A5003BC45C /* Bmob-DemoTests */,
 				C717303322FD60A5003BC45C /* Bmob-DemoUITests */,
 				C717300E22FD60A4003BC45C /* Products */,
+				8743A81DCF6F3A5A68B6E03C /* Pods */,
+				60E670F2268787C89FF616B9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,6 +163,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C717303922FD60A5003BC45C /* Build configuration list for PBXNativeTarget "Bmob-Demo" */;
 			buildPhases = (
+				3D3E2398D03C0B5A51387C63 /* [CP] Check Pods Manifest.lock */,
 				C717300922FD60A4003BC45C /* Sources */,
 				C717300A22FD60A4003BC45C /* Frameworks */,
 				C717300B22FD60A4003BC45C /* Resources */,
@@ -256,6 +281,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3D3E2398D03C0B5A51387C63 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bmob-Demo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C717300922FD60A4003BC45C /* Sources */ = {
@@ -433,6 +483,7 @@
 		};
 		C717303A22FD60A5003BC45C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76BBC704D8298A359DDFFCEE /* Pods-Bmob-Demo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -449,6 +500,7 @@
 		};
 		C717303B22FD60A5003BC45C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28B93BBD85F2D6D0FA80D019 /* Pods-Bmob-Demo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
